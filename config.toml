@@ -1,0 +1,38 @@
+base_url = "https://1bit.pw"
+compile_sass = true
+title = "1-bit Password"
+description = ""
+
+taxonomies = [
+	{name = "blog/tags", rss = true},
+	{name = "blog/categories", rss = true}
+]
+
+[extra]
+author = "avitex"
+
+[[extra.main_menu]]
+name = "home"
+url = "/"
+
+[[extra.main_menu]]
+name = "blog"
+url = "/blog"
+sub = [
+	{name = "lastest", url = "/blog"},
+	{name = "categories", url = "/blog/categories"},
+	{name = "tags", url = "/blog/tags"}
+]
+
+[[extra.main_menu]]
+name = "projects"
+url = "/projects"
+
+[[extra.main_menu]]
+name = "about"
+url = "/about"
+sub = [
+	{name = "overview", url = "/about"},
+	{name = "bio", url = "/about/bio"},
+	{name = "social", url = "/about/social"}
+]

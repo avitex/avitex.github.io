@@ -1,0 +1,44 @@
+{% extends "index.html" %}
+
+{% block content %}
+	<article itemscope itemtype="http://schema.org/BlogPosting">
+		<header>
+			<h1 itemprop="headline">{{ page.title }}</h1>
+			<span class="muted">{{ post_macros::meta(page=page) }}</span>
+		</header>
+		<div itemprop="articleBody">
+		{{ page.content | safe }}
+		</div>
+		{% block page_footer %}
+			<footer>
+				<hr>
+				<p>
+					{% if config.extra.author %}
+						Published by {{ config.extra.author }}
+					{% endif %}
+					{% if page.taxonomies | get(key="blog/categories") %}
+						{% set categories = page.taxonomies | get(key="blog/categories") %}
+						in <a href="{{ get_taxonomy_url(kind="blog/categories", name=categories[0]) }}">{{ categories[0] }}</a>
+					{% endif %}
+					{% set tags = page.taxonomies | get(key="blog/tags") %}
+					{% if tags %}
+						and tagged
+						{% for tag in tags %}
+							<a href="{{ get_taxonomy_url(kind="blog/tags", name=tag) }}">{{ tag }}</a>
+							{% if tags | length > 1 %}
+								{% if loop.index != tags | length %}
+									{% if loop.index == tags | length - 1 %}
+										and
+									{% else %}
+										,
+									{% endif %}
+								{% endif %}
+							{% endif %}
+						{% endfor %}
+					{% endif %}
+				</p>
+			</footer>
+		{% endblock page_footer %}
+	</article>
+{% endblock content %}
+

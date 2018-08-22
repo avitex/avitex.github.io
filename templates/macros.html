@@ -1,0 +1,15 @@
+{% macro link(url) %}
+	{%- if url is starting_with("/") or url is starting_with("./") -%}
+		{{ get_url(path=url) }}
+	{%- else -%}
+		{{ url }}
+	{%- endif -%}
+{% endmacro link %}
+
+{% macro is_active_nav(url, curr_url) %}
+	{%- if url == get_url(path="/") -%}
+		{{ url == curr_url }}
+	{%- else -%}
+		{{ curr_url is starting_with(url) }}
+	{%- endif -%}
+{% endmacro is_active_nav %}

@@ -1,0 +1,31 @@
+.monk.light {
+	color: #444;
+	background-color: #fff;
+
+	a {
+		color: #556;
+	}
+
+	code {
+		background-color: #eee;
+	}
+
+	.menu a {
+		color: #222;
+		text-decoration-color: #555;
+	
+		&:hover {
+			text-decoration-color: #428a42;
+		}
+	
+		&.active {
+			font-weight: 600;
+			color: #77f;
+			text-decoration-color: #99f;
+		}
+	}
+
+	hr {
+		border-bottom-color: #ddd;
+	}
+}
