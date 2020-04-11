@@ -6,10 +6,10 @@
     <meta name="author" content="{{ config.extra.author }}">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ get_url(path="site.css") }}" />
-    <link rel="stylesheet" href="{{ get_url(path="fonts.min.css") }}" />
-    <link rel="icon" type="image/png" href="{{ get_url(path="favicon.png") }}" />
-    <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="rss.xml") }}" />
+    <link rel="stylesheet" href="{{ get_url(path="site.css") | safe }}" />
+    <link rel="stylesheet" href="{{ get_url(path="fonts.min.css") | safe }}" />
+    <link rel="icon" type="image/png" href="{{ get_url(path="favicon.png") | safe }}" />
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="rss.xml") | safe }}" />
     <title>{% block title %}{{ config.title }}{% endblock title %}</title>
 </head>
 <body>
