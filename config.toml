@@ -5,6 +5,7 @@ description = "Home of avitex"
 compile_sass = true
 highlight_code = true
 build_search_index = true
+generate_rss = true
 
 taxonomies = [
 	{name = "blog/tags", rss = true},

@@ -1,6 +1,6 @@
 {% macro link(url) %}
 	{%- if url is starting_with("/") or url is starting_with("./") -%}
-		{{ get_url(path=url) }}
+		{{ get_url(path=url, trailing_slash=false) }}
 	{%- else -%}
 		{{ url }}
 	{%- endif -%}
