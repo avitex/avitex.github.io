@@ -1,0 +1,13 @@
+.search-container {
+    input {
+        padding: 0.5rem 0.75rem;
+        border: none;
+        font-family: $mono-font;
+        background-color: $fg-color;
+        border-radius: 4px;
+    }
+
+    .search-results {
+        display: none;
+    }
+}

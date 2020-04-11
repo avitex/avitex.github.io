@@ -1,7 +1,10 @@
+title = "1bit.pw"
 base_url = "https://1bit.pw"
+description = "Home of avitex"
+
 compile_sass = true
-title = "1-bit Password"
-description = ""
+highlight_code = true
+build_search_index = true
 
 taxonomies = [
 	{name = "blog/tags", rss = true},
@@ -12,14 +15,10 @@ taxonomies = [
 author = "avitex"
 
 [[extra.main_menu]]
-name = "home"
-url = "/"
-
-[[extra.main_menu]]
 name = "blog"
 url = "/blog"
 sub = [
-	{name = "lastest", url = "/blog"},
+	{name = "latest", url = "/blog"},
 	{name = "categories", url = "/blog/categories"},
 	{name = "tags", url = "/blog/tags"}
 ]
@@ -27,6 +26,11 @@ sub = [
 [[extra.main_menu]]
 name = "projects"
 url = "/projects"
+sub = [
+	{name = "rust", url = "#rust"},
+	{name = "elixir", url = "#elixir"},
+	{name = "github", url = "https://github.com/avitex"}
+]
 
 [[extra.main_menu]]
 name = "about"

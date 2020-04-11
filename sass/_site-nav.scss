@@ -1,0 +1,37 @@
+.site-nav {
+    ul {
+        padding: 0;
+        list-style: none;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+        font-weight: bold;
+        font-family: $heading-font;
+        font-size: 0.8rem;  
+    }
+
+    li {
+        display: inline-block;
+        padding: 0 0.2rem;
+
+        color: $grey;
+
+        & > a.active {
+            color: $white;
+        }
+    }
+
+    a {
+        color: inherit;
+        border: none;
+        text-decoration: none;
+    }
+
+    .main-menu {
+        font-size: 0.75rem;
+    }
+
+    .sub-menu {
+        color: $grey;
+        font-size: 0.65rem;
+    }
+}

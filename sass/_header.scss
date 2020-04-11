@@ -1,0 +1,17 @@
+.site-header {
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+
+    .brand {
+        margin-right: 0.5rem;
+        opacity: 0.8;
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    nav {
+        flex: 1;
+    }
+}

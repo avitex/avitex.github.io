@@ -1,8 +1,6 @@
-{% extends "index.html" %}
+{% extends "content.html" %}
 
+{% block title %}{{ page.title }} - {{ config.title }}{% endblock %}
 {% block content %}
-	<main class="main">
-		{{ page.content | safe }}
-	</main>
+    {{ page.content | safe }}
 {% endblock content %}
-

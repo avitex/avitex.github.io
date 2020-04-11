@@ -26,7 +26,7 @@
 
 ## Forums
 
-- [Rust](https://users.rust-lang.org/u/avitex) (_dormant)
+- [Rust](https://users.rust-lang.org/u/avitex) (_dormant_)
 - [Vue](https://forum.vuejs.org/u/avitex) (_dormant_)
 - [Elixir](https://elixirforum.com/u/avitex) (_dormant_)
 
@@ -34,8 +34,8 @@
 
 - [Steam](https://steamcommunity.com/id/avitex)
 - [Faceit](https://www.faceit.com/en/players/avitex)
-- [ESEA](https://play.esea.net/users/680258) (dormant)
-- [Cybergamer](https://www.cybergamer.com/profile/246296/avitex/) (dormant)
+- [ESEA](https://play.esea.net/users/680258) (_dormant_)
+- [Cybergamer](https://www.cybergamer.com/profile/246296/avitex/) (_dormant_)
 
 ## Other
 

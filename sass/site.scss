@@ -1,5 +1,147 @@
-@import "reset";
-@import "theme";
-@import "dark";
-@import "light";
+$red: #ef5350;
+$grey: #a1a1a1;
+$white: #f1f1f1;
+$bg-color: #111111;
+$fg-color: #1d1d1d;
+$border-color: #161616;
 
+$mono-font: 'Source Code Pro', monospace;
+$content-font: 'Charter', serif;
+$heading-font: 'Space Grotesk', Helvetica, sans-serif;
+
+@import './reset';
+@import './scrollbar';
+@import './header';
+@import './search';
+@import './site-nav';
+@import './home';  
+
+* {
+    color: inherit;
+    line-height: 1.3;
+    text-decoration: inherit;
+}
+
+html {
+    color: $white;
+    background: $bg-color;
+    font-family: $content-font;
+    text-rendering: optimizeLegibility;
+
+    @media all and (min-width: 640px) {
+        font-size: 17px;
+    }
+
+    @media all and (min-width: 720px) {
+        font-size: 18px
+    }
+
+    @media all and (min-width: 1024px) {
+        font-size: 19px;
+    }
+}
+
+main {
+    font-size: 0.9rem;
+
+    a {
+        color: $red;
+        border-bottom: 1px solid $red;
+    }
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+    font-family: $heading-font;
+    margin: 1.2rem 0 0.4rem 0;
+
+    & > a {
+        color: inherit;
+        border-bottom: none; 
+    }
+
+    a.anchor {
+        display: none;
+        color: $red;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    &:hover a.anchor {
+        display: inline;
+    }
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+small {
+    font-size: 0.5em;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    background-color: $border-color;
+}
+
+article {
+    header, footer .info {
+        font-size: 0.8em;
+    }
+
+    .icon {
+        color: $grey;
+    }
+
+    .readmore {
+        span {
+            font-size: 0.9em;
+        }
+
+        .icon {
+            color: $red;
+        }
+    }
+}
+
+p {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+code {
+    font-family: $mono-font;
+    background-color: $fg-color;
+    padding: 2.5px 5px;
+    border-radius: 4px;
+    font-size: 0.75em;
+}
+
+.container {
+    width: 100%;
+    min-width: 600px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 2rem;
+}
+
+.muted {
+    color: $grey;
+}
+
+.mono {
+    font-family: $mono-font;
+}

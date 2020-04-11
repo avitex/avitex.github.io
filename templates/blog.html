@@ -1,19 +1,22 @@
-{% extends "index.html" %}
+{% extends "content.html" %}
+{% import "post_macros.html" as post_macros %}
+
+{% block title %}Blog - {{ config.title }}{% endblock %}
+
 {% block content %}
-	<main class="main">
-		{% for page in paginator.pages %}
-			{{ post_macros::page_in_list(page=page) }}
-		{% endfor %}
-		<nav>
-			<p>
-				{% if paginator.previous %}
-				<a href="{{ paginator.previous }}">&laquo; Previous</a> |
-				{% endif %}
-				<span>Page {{ paginator.current_index }} of {{ paginator.pagers | length }}</span>
-				{% if paginator.next %}
-				| <a href="{{ paginator.next }}">Next &raquo;</a>
-				{% endif %}
-			</p>
-		</nav>
-	</main>
+    <main class="main">
+        {% for page in paginator.pages %}
+            {{ post_macros::page_in_list(page=page) }}
+        {% endfor %}
+        <hr />
+        <nav class="pagination muted">
+            {% if paginator.previous %}
+            <a href="{{ paginator.previous }}">&laquo; Previous</a> |
+            {% endif %}
+            <span>Page {{ paginator.current_index }} of {{ paginator.number_pagers }}</span>
+            {% if paginator.next %}
+            | <a href="{{ paginator.next }}">Next &raquo;</a>
+            {% endif %}
+        </nav>
+    </main>
 {% endblock content %}

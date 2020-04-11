@@ -1,18 +1,17 @@
 {% macro meta(page) %}
-	<svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32"
+	<svg style="margin-bottom: -3px" class="icon i-edit" viewBox="0 0 32 32"
+		 width="16" height="16" fill="none" stroke="currentcolor"
+		 stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+		<path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z"/>
+	</svg>
+	<time datetime="{{ page.date | date(format="%F") }}" itemprop="datePublished">{{ page.date | date(format="%b %d, %Y") }}</time>
+	<svg style="margin-bottom:-3px" class="icon i-clock" viewBox="0 0 32 32"
 		width="16" height="16" fill="none" stroke="currentcolor"
 		stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
 		<circle cx="16" cy="16" r="14"/>
 		<path d="M16 8 L16 16 20 20"/>
 	</svg>
 	<span>{{ page.reading_time }} minute read</span>
-	<svg style="margin-bottom: -3px" class="i-edit" viewBox="0 0 32 32"
-		 width="16" height="16" fill="none" stroke="currentcolor"
-		 stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-		<path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z"/>
-	</svg>
-
-	Published: {{ page.date | date(format="%F") }}
 {% endmacro meta %}
 
 {% macro page_in_list(page) %}
@@ -21,12 +20,19 @@
 			<h2 itemprop="name">
 				<a href="{{ page.permalink }}">{{ page.title }}</a>
 			</h2>
-			<span class="muted">{{ self::meta(page=page) }}</span>
+			<span class="muted mono">{{ self::meta(page=page) }}</span>
 		</header>
 		{% if page.summary %}
 			<div itemprop="summary">
 				{{ page.summary | safe }}
-				<nav class="readmore"><a itemprop="url" href="{{ page.permalink }}">Read More&nbsp;&raquo;</a></nav>
+				<nav class="readmore">
+					<a itemprop="url" href="{{ page.permalink }}">
+						<span>Read More</span>
+						<svg class="icon i-caret-r" xmlns="http://www.w3.org/2000/svg" fill="currentcolor" viewBox="0 0 5.9 9" width="5.9" height="9">
+							<path d="M5.9 4.5L4.5 3.1 1.4 0 0 1.4l3.1 3.1-3.1 3L1.4 9l3.1-3.1z"></path>
+						</svg>
+					</a>
+				</nav>
 			</div>
 		{% endif %}
 	</article>

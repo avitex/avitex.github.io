@@ -1,0 +1,19 @@
+@media screen and (min-width: 1200px) {
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: $bg-color $border-color;
+    }
+
+    *::-webkit-scrollbar {
+        width: 16px;
+    }
+
+    *::-webkit-scrollbar-track {
+        background: $border-color;
+    }
+
+    *::-webkit-scrollbar-thumb {
+        background-color: $bg-color;
+        border: 3px solid $border-color;
+    }
+}

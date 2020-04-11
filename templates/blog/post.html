@@ -1,10 +1,11 @@
-{% extends "index.html" %}
+{% extends "content.html" %}
+{% import "post_macros.html" as post_macros %}
 
 {% block content %}
 	<article itemscope itemtype="http://schema.org/BlogPosting">
-		<header>
-			<h1 itemprop="headline">{{ page.title }}</h1>
-			<span class="muted">{{ post_macros::meta(page=page) }}</span>
+		<header class="article-header">
+			<span class="mono info">{{ post_macros::meta(page=page) }}</span>
+			<h1 itemprop="name headline">{{ page.title }}</h1>
 		</header>
 		<div itemprop="articleBody">
 		{{ page.content | safe }}
@@ -12,7 +13,7 @@
 		{% block page_footer %}
 			<footer>
 				<hr>
-				<p>
+				<p class="info muted mono">
 					{% if config.extra.author %}
 						Published by {{ config.extra.author }}
 					{% endif %}

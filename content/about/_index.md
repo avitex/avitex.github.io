@@ -1,14 +1,15 @@
 +++
 template = "about.html"
+insert_anchor_links = "right"
 +++
 
-Hi! I'm James. I live in Australia, and the virtual realm is my dojo.
+Hi! I'm James, a fellow earthling living in Australia.
 
 ## PGP
 
-You can find my pgp public key [here](/id/pk.txt).
+You can find my PGP public key [here](/id/pk.txt).
 
-## Contacting me
+## Contact
 
 If you wish to contact me, email is easiest via `theavitex (at) gmail (dot) com`.  
-See my [social links](./about/social.md) for other methods to get in touch.
+See my [social links](@/about/social.md) for other methods to get in touch.

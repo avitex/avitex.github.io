@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#111111"/>
+    <meta name="author" content="{{ config.extra.author }}">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ get_url(path="site.css") }}"/>
+    <link rel="stylesheet" href="{{ get_url(path="fonts.min.css") }}"/>
+    <link rel="icon" type="image/png" href="{{ get_url(path="favicon.png") }}">
+    <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+</head>
+<body>
+    {% block body %}{% endblock body %}
+    <script type="text/javascript" src="{{ get_url(path="elasticlunr.min.js") }}"></script>
+    <script type="text/javascript" src="{{ get_url(path="search_index.en.js") }}"></script>
+    <script type="text/javascript" src="{{ get_url(path="search.js") }}"></script>
+</body>
+</html>

@@ -1,4 +1,5 @@
-{% extends "index.html" %}
+{% extends "content.html" %}
+{% import "post_macros.html" as post_macros %}
 
 {% block content %}
 	<h1>Category: <code>{{ term.name }}</code> <small>(<a href="{{ get_taxonomy_url(kind="blog/categories", name=term.name) }}rss.xml">RSS</a>)</small></h1>
