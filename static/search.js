@@ -1,3 +1,8 @@
+// TODO: remove
+// <script type="text/javascript" src="{{ get_url(path="elasticlunr.min.js") | safe }}"></script>
+// <script type="text/javascript" src="{{ get_url(path="search_index.en.js") | safe }}"></script>
+// <script type="text/javascript" src="{{ get_url(path="search.js") | safe }}"></script>
+
 function debounce(func, wait) {
   var timeout;
 
@@ -139,7 +144,7 @@ function initSearch() {
   var MAX_ITEMS = 10;
 
   var options = {
-    bool: "AND",
+    bool: 'AND',
     fields: {
       title: { boost: 2 },
       body: { boost: 1 },
