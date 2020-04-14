@@ -1,8 +1,8 @@
 {% macro link(url) %}
 	{%- if url is starting_with("/") or url is starting_with("./") -%}
-		{{ get_url(path=url, trailing_slash=false) }}
+		{{ get_url(path=url, trailing_slash=false) | safe }}
 	{%- else -%}
-		{{ url }}
+		{{ url | safe }}
 	{%- endif -%}
 {% endmacro link %}
 
@@ -13,3 +13,17 @@
 		{{ curr_url is starting_with(url) }}
 	{%- endif -%}
 {% endmacro is_active_nav %}
+
+{% macro meta_desc(ctx) %}
+	{%- if ctx.description == "" -%}
+		{{ ctx.description }}
+	{%- else -%}
+		{%- if ctx.summary -%}
+			{{ ctx.summary | striptags | replace(from="
+", to=" ") | trim }}
+		{%- else -%}
+			{{ ctx.content | striptags | replace(from="
+", to=" ") | trim }}
+		{%- endif -%}
+	{%- endif -%}
+{% endmacro meta_desc %}

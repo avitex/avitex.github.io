@@ -1,6 +1,4 @@
 {% extends "content.html" %}
-
+{% import "macros.html" as macros %}
 {% block title %}{{ page.title }} - {{ config.title }}{% endblock %}
-{% block content %}
-    {{ page.content | safe }}
-{% endblock content %}
+{% block content %}{{ page.content | safe }}{% endblock content %}

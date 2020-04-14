@@ -1,28 +1,30 @@
 <nav class="site-nav" itemscope itemtype="http://schema.org/SiteNavigationElement">
     <ul class="menu main-menu">
-        {% for item in config.extra.main_menu %}    
-            <li>
-                <a itemprop="url"
-                    class="{% if macros::is_active_nav(url=macros::link(url=item.url), curr_url=current_url) == "true" %}active{% endif %}"
-                    href="{{ macros::link(url=item.url) }}">
-                    <span itemprop="name">{{ item.name }}</span>
-                </a>
-            </li>
-        {% endfor %}
-        </ul>
-    <ul class="menu sub-menu">
-        {% for item in config.extra.main_menu %}
-            {% if item.sub and current_url is starting_with(macros::link(url=item.url)) %}
+    {% for item in config.extra.main_menu %}
+        <li>
+            <a itemprop="url"
+                class="{% if macros::is_active_nav(url=macros::link(url=item.url), curr_url=current_url) == "true" %}active{% endif %}"
+                href="{{ macros::link(url=item.url) }}">
+                <span itemprop="name">{{ item.name }}</span>
+            </a>
+        </li>
+    {% endfor %}
+    </ul>
+    {% for item in config.extra.main_menu %}
+        {% if item.sub and current_url is starting_with(macros::link(url=item.url)) %}
+            <ul class="menu sub-menu">
                 {% for sub_item in item.sub %}
                     <li>
-                        <a itemprop="url"
-                            class="{% if macros::link(url=sub_item.url) == current_url %}active{% endif %}"
-                            href="{{ macros::link(url=sub_item.url) }}">
+                        <a
+                            itemprop="url"
+                            href="{{ macros::link(url=sub_item.url) }}"
+                            {%- if macros::link(url=sub_item.url) == current_url %} class="active" {% endif -%}
+                            >
                                 <span itemprop="name">{{ sub_item.name }}</span>
                         </a>
                     </li>
                 {% endfor %}
-            {% endif %}
-        {% endfor %}
-    </ul>
+            </ul>
+        {% endif %}
+    {% endfor %}
 </nav>

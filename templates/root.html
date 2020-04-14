@@ -1,3 +1,4 @@
+{% import "macros.html" as macros %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +7,10 @@
     <meta name="author" content="{{ config.extra.author }}">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{% block meta_description %}
+        {%- if section -%}{{ macros::meta_desc(ctx=section) }}{%- endif -%}
+        {%- if page -%}{{ macros::meta_desc(ctx=page) }}{%- endif -%}
+    {% endblock meta_description %}">
     <link rel="stylesheet" href="{{ get_url(path="site.css") | safe }}" />
     <link rel="stylesheet" href="{{ get_url(path="fonts.min.css") | safe }}" />
     <link rel="icon" type="image/png" href="{{ get_url(path="favicon.png") | safe }}" />
@@ -14,8 +19,8 @@
 </head>
 <body>
     {% block body %}{% endblock body %}
-    <script type="text/javascript" src="{{ get_url(path="elasticlunr.min.js") }}"></script>
-    <script type="text/javascript" src="{{ get_url(path="search_index.en.js") }}"></script>
-    <script type="text/javascript" src="{{ get_url(path="search.js") }}"></script>
+    <script type="text/javascript" src="{{ get_url(path="elasticlunr.min.js") | safe }}"></script>
+    <script type="text/javascript" src="{{ get_url(path="search_index.en.js") | safe }}"></script>
+    <script type="text/javascript" src="{{ get_url(path="search.js") | safe }}"></script>
 </body>
 </html>

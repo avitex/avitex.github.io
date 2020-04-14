@@ -1,8 +1,6 @@
 {% extends "content.html" %}
 {% import "post_macros.html" as post_macros %}
-
 {% block title %}Blog - {{ config.title }}{% endblock %}
-
 {% block content %}
     <main class="main">
         {% for page in paginator.pages %}

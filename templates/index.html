@@ -1,11 +1,12 @@
 {% extends "root.html" %}
 {% import "macros.html" as macros %}
 {% block title %}{{ config.description }} - {{ config.title }}{% endblock %}
+{% block meta_description %}The personal homepage of {{config.extra.author}}{% endblock meta_description %}
 {% block body %}
     <main class="home-page">
-        <img src="/brain-256px.png" alt="avitex logo" />
+        <img alt="brain logo" src="{{ get_url(path="brain-256px.png") | safe }}" />
         <div class="inner">
-            <h1>avitex</h1>
+            <h1>{{config.extra.author}}</h1>
             {% include "partials/site-nav.html" %}
         </div>
     </main>

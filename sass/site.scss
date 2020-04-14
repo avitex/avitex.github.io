@@ -9,7 +9,11 @@ $mono-font: 'Source Code Pro', monospace;
 $content-font: 'Charter', serif;
 $heading-font: 'Space Grotesk', Helvetica, sans-serif;
 
-@import './reset';
+$lg-breakpoint: 1024px;
+$md-breakpoint: 720px;
+$sm-breakpoint: 640px;
+
+@import './layout';
 @import './scrollbar';
 @import './header';
 @import './search';
@@ -60,11 +64,14 @@ h1, h2, h3 {
         border-bottom: none; 
     }
 
-    a.anchor {
+    a.anchor{
         display: none;
-        color: $red;
-        font-weight: bold;
-        text-decoration: none;
+        &::after {
+            color: $red;
+            content: " #";
+            font-weight: bold;
+            text-decoration: none;
+        }
     }
 
     &:hover a.anchor {
@@ -127,15 +134,6 @@ code {
     padding: 2.5px 5px;
     border-radius: 4px;
     font-size: 0.75em;
-}
-
-.container {
-    width: 100%;
-    min-width: 600px;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 2rem;
 }
 
 .muted {

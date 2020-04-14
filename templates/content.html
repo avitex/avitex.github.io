@@ -3,13 +3,13 @@
 {% block body %}
     <div class="container">
         <header class="site-header">
-            <a class="brand" href="{{ get_url(path="/") }}"><img alt="avitex logo" src="{{ get_url(path="brain-48px.png") }}" /></a>
+            <a class="brand" href="{{ get_url(path="/") | safe }}">
+                <img alt="brain logo" src="{{ get_url(path="brain-48px.png") | safe }}" />
+            </a>
             {% include "partials/site-nav.html" %}
         </header>
-        <main class="content {% block extra_content_class %}{% endblock extra_content_class %}">
-            {% block content %}
-                {{ section.content | safe }}
-            {% endblock content %}
+        <main class="content">
+            {% block content %}{{ section.content | safe }}{% endblock content %}
         </main>
     </div>
 {% endblock body %}
