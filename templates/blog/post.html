@@ -18,13 +18,9 @@
 					{% if config.extra.author %}
 						Published by {{ config.extra.author }}
 					{% endif %}
-					{% if page.taxonomies | get(key="blog/categories") %}
-						{% set categories = page.taxonomies | get(key="blog/categories") %}
-						in <a href="{{ get_taxonomy_url(kind="blog/categories", name=categories[0]) | safe }}">{{ categories[0] }}</a>
-					{% endif %}
 					{% set tags = page.taxonomies | get(key="blog/tags") %}
 					{% if tags %}
-						and tagged
+						with tags
 						{% for tag in tags %}
 							<a href="{{ get_taxonomy_url(kind="blog/tags", name=tag) | safe }}">{{ tag }}</a>
 							{% if tags | length > 1 %}

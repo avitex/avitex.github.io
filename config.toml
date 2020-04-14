@@ -9,7 +9,6 @@ generate_rss = true
 
 taxonomies = [
 	{name = "blog/tags", rss = true},
-	{name = "blog/categories", rss = true}
 ]
 
 [extra]
@@ -20,7 +19,6 @@ name = "Blog"
 url = "/blog"
 sub = [
 	{name = "Latest", url = "/blog"},
-	{name = "Categories", url = "/blog/categories"},
 	{name = "Tags", url = "/blog/tags"}
 ]
 
