@@ -1,5 +1,6 @@
 +++
 title = "Social"
+description = "Links to my accounts on various social services for identity, code, media, gaming and discussion."
 +++
 
 ## Identity

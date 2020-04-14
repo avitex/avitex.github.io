@@ -2,8 +2,6 @@
 title = "Hello World"
 date = 2018-08-22
 
-template = "blog/post.html"
-
 [taxonomies]
 "blog/tags" = ["new"]
 "blog/categories" = ["meta"]

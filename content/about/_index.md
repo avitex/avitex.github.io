@@ -1,6 +1,7 @@
 +++
 template = "about.html"
 insert_anchor_links = "right"
+description = "Hi! I'm James, a fellow earthling living in Australia."
 +++
 
 Hi! I'm James, a fellow earthling living in Australia.

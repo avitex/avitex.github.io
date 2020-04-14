@@ -15,7 +15,7 @@
 {% endmacro is_active_nav %}
 
 {% macro meta_desc(ctx) %}
-	{%- if ctx.description == "" -%}
+	{%- if ctx.description -%}
 		{{ ctx.description }}
 	{%- else -%}
 		{%- if ctx.summary -%}
