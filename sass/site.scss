@@ -95,6 +95,14 @@ small {
     font-size: 0.5em;
 }
 
+ul, ol {
+    padding-left: 1rem;
+
+    li {
+        padding-bottom: 0.2rem;
+    }
+}
+
 hr {
     border: none;
     height: 2px;

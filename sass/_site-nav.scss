@@ -12,18 +12,17 @@
     li {
         display: inline-block;
         padding: 0 0.2rem;
-
-        color: $grey;
-
-        & > a.active {
-            color: $white;
-        }
     }
 
     a {
-        color: inherit;
+        display: inline-block;
+        color: $grey;
         border: none;
         text-decoration: none;
+
+        &:hover, &.active {
+            color: $white;
+        }
     }
 
     .main-menu {
@@ -31,7 +30,6 @@
     }
 
     .sub-menu {
-        color: $grey;
         font-size: 0.65rem;
     }
 }
