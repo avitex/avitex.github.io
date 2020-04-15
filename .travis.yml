@@ -11,6 +11,7 @@ script:
 after_success: |
   [ $TRAVIS_BRANCH = source ] &&
   [ $TRAVIS_PULL_REQUEST = false ] &&
+  zola check &&
   zola build &&
   sudo pip install ghp-import &&
   ghp-import -m "build ${TRAVIS_COMMIT}" -c 1bit.pw -n public -b master &&

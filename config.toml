@@ -12,6 +12,11 @@ taxonomies = [
 	{name = "blog/tags", rss = true},
 ]
 
+[link_checker]
+skip_prefixes = [
+	"https://play.esea.net"
+]
+
 [extra]
 author = "avitex"
 
