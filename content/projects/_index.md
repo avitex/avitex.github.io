@@ -8,10 +8,10 @@ description = "Project repositories, along with their associated state. PRs are 
 Project repositories, along with their associated state.  
 PRs are always welcome, see my [about page](@/about/_index.md) to contact me.
 
-# Rust
+## Rust
 
 {{ projects(lang="rust") }}
 
-# Elixir
+## Elixir
 
 {{ projects(lang="elixir") }}
