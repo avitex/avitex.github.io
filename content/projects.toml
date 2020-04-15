@@ -1,0 +1,91 @@
+status = { experimental = "red", development = "orange", published = "green" }
+
+[project.rust-arae]
+lang = "rust"
+crate = "arae"
+status = "experimental"
+github = "avitex/rust-arae"
+
+[project.rust-dnscat]
+lang = "rust"
+crate = "dnscat"
+status = "development"
+github = "avitex/rust-dnscat"
+
+[project.rust-public-ip]
+lang = "rust"
+crate = "public-ip"
+status = "published"
+github = "avitex/rust-public-ip"
+
+[project.mdbook-tera]
+lang = "rust"
+crate = "mdbook-tera"
+status = "published"
+github = "avitex/mdbook-tera"
+
+[project.rust-xlff]
+lang = "rust"
+crate = "xlff"
+status = "development"
+github = "avitex/rust-xlff"
+
+[project.rust-abuseipdb]
+lang = "rust"
+crate = "abuseipdb"
+status = "published"
+github = "avitex/rust-abuseipdb"
+
+[project.rust-aliasable-deref-trait]
+lang = "rust"
+crate = "aliasable_deref_trait"
+status = "published"
+github = "avitex/rust-aliasable-deref-trait"
+
+[project.rust-shared-box]
+lang = "rust"
+crate = "shared-box"
+status = "development"
+github = "avitex/rust-shared-box"
+
+[project.rust-feast]
+lang = "rust"
+crate = "feast"
+status = "experimental"
+github = "avitex/rust-feast"
+
+[project.battlelayer]
+lang = "rust"
+crate = "battlelayer"
+status = "development"
+github = "avitex/battlelayer"
+
+[project.elixir-glicko]
+lang = "elixir"
+hex = "glicko"
+status = "published"
+github = "avitex/elixir-glicko"
+
+[project.elixir-rcon]
+lang = "elixir"
+hex = "rcon"
+status = "published"
+github = "avitex/elixir-rcon"
+
+[project.elixir-vultr]
+lang = "elixir"
+hex = "vultr"
+status = "published"
+github = "avitex/elixir-vultr"
+
+[project.elixir-gitlab]
+lang = "elixir"
+hex = "gitlab"
+status = "development"
+github = "avitex/elixir-gitlab"
+
+[project.typed-struct-cast]
+lang = "elixir"
+hex = "typed-struct-cast"
+status = "development"
+github = "avitex/typed-struct-cast"

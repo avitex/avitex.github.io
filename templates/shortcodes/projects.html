@@ -1,0 +1,38 @@
+{% import "macros.html" as macros %}
+{% set data = load_data(path="content/projects.toml") %}
+<table>
+    <thead>
+        <tr>
+            <th>Project</th>
+            <th>Links</th>
+            <th>Package</th>
+            <th>Maintenance</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+            {% for project_name, project in data.project %}
+            {% if project.lang == lang %}
+            <tr>
+                <td><code>{{ project_name }}</code></td>
+                <td><a href="https://github.com/{{ project.github }}">github</a></td>
+                <td>
+                    {% if project.crate %}
+                        {{ macros::badge(type="crates/v", scope=project.crate, desc="Rust crate", link="https://crates.io/" ~ project.crate) }}
+                    {% endif %}
+                    {% if project.hex %}
+                        {{ macros::badge(type="hexpm/v", scope=project.hex, desc="Hex package", link="https://hex.pm/" ~ project.hex) }}
+                    {% endif %}
+                </td>
+                <td>
+                    {{ macros::status_badge(status=project.status, color=data.status[project.status], desc="Project status", link=false) }}
+                </td>
+                <td>
+                    {{ macros::badge(type="github/issues", scope=project.github, desc="Github issues", link="https://github.com/" ~ project.github ~ "/issues") }}
+                    {{ macros::badge(type="travis/com", scope=project.github ~ "/master", desc="Build status", link="https://travis-ci.com/" ~ project.github) }}
+                </td>
+            </tr>
+            {% endif %}
+        {% endfor %}
+    </tbody>
+</table>

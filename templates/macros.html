@@ -27,3 +27,15 @@
 		{%- endif -%}
 	{%- endif -%}
 {% endmacro meta_desc %}
+
+{% macro status_badge(status, desc, link, color) %}
+	{{ self::badge(type="badge", scope="status-" ~ status ~ "-" ~ color, desc=desc, link=link) }}
+{% endmacro status_badge %}
+
+{% macro badge(type, scope, desc, link) %}
+	{% if link %}
+		<a class="badge" href="{{ link }}"><img alt="{{ desc }}" src="https://img.shields.io/{{ type }}/{{ scope }}" /></a>
+	{% else %}
+		<img class="badge" alt="{{ desc }}" src="https://img.shields.io/{{ type }}/{{ scope }}" />
+	{% endif %}
+{% endmacro link %}

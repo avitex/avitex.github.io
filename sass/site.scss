@@ -136,12 +136,55 @@ p {
     padding-bottom: 0.5rem;
 }
 
+pre {
+    background-color: $fg-color;
+    font-size: 0.8em;
+    overflow-x: auto;
+    padding: 0.8rem;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+    border-left: 4px solid $red;
+}
+
+table {
+    border-collapse: collapse;
+	border-spacing: 0;
+
+    tr {
+        border-bottom: 1px solid $border-color;
+    }
+
+    th {
+        padding-top: 0.6em;
+        padding-bottom: 0.4em;
+        padding-left: 0.8em;
+        padding-right: 0.8em;
+        font-size: 0.9em;
+        font-family: $heading-font;
+        font-weight: normal;
+        background-color: $border-color;
+    }
+
+    td {
+        padding: 0.4em 0.6em;
+    }
+}
+
 code {
     font-family: $mono-font;
     background-color: $fg-color;
     padding: 2.5px 5px;
     border-radius: 4px;
     font-size: 0.75em;
+}
+
+img.badge, a.badge img {
+    vertical-align: middle;
+}
+
+.badge {
+    border: none;
+    text-decoration: none;
 }
 
 .muted {

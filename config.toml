@@ -4,6 +4,7 @@ description = "Home of avitex"
 
 compile_sass = true
 highlight_code = true
+highlight_theme = "1337"
 build_search_index = true
 generate_rss = true
 
