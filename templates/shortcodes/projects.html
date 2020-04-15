@@ -18,10 +18,10 @@
                 <td><a href="https://github.com/{{ project.github }}">github</a></td>
                 <td>
                     {% if project.crate %}
-                        {{ macros::badge(type="crates/v", scope=project.crate, desc="Rust crate", link="https://crates.io/" ~ project.crate) }}
+                        {{ macros::badge(type="crates/v", scope=project.crate, desc="Rust crate", link="https://crates.io/crates/" ~ project.crate) }}
                     {% endif %}
                     {% if project.hex %}
-                        {{ macros::badge(type="hexpm/v", scope=project.hex, desc="Hex package", link="https://hex.pm/" ~ project.hex) }}
+                        {{ macros::badge(type="hexpm/v", scope=project.hex, desc="Hex package", link="https://hex.pm/packages/" ~ project.hex) }}
                     {% endif %}
                 </td>
                 <td>
