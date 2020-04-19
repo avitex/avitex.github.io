@@ -1,5 +1,11 @@
 status = { experimental = "red", development = "orange", published = "green" }
 
+[project.rust-badgen]
+lang = "rust"
+crate = "badgen"
+status = "development"
+github = "avitex/rust-badgen"
+
 [project.rust-arae]
 lang = "rust"
 crate = "arae"
