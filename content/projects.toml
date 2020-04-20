@@ -12,6 +12,12 @@ crate = "arae"
 status = "experimental"
 github = "avitex/rust-arae"
 
+[project.rust-char-width]
+lang = "rust"
+crate = "char-width"
+status = "development"
+github = "avitex/rust-char-width"
+
 [project.rust-dnscat]
 lang = "rust"
 crate = "dnscat"
