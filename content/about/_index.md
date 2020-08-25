@@ -12,5 +12,5 @@ You can find my PGP public key [here](/id/pk.txt).
 
 ## Contact
 
-If you wish to contact me, email is easiest via `theavitex (at) gmail (dot) com`.  
+If you wish to contact me, email is easiest via `avitex (at) wfxlabs (dot) com`.  
 See my [social links](@/about/social.md) for other methods to get in touch.
