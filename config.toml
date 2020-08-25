@@ -14,7 +14,8 @@ taxonomies = [
 
 [link_checker]
 skip_prefixes = [
-	"https://play.esea.net"
+	"https://play.esea.net",
+	"https://letsplay.live"
 ]
 
 [extra]
