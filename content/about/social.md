@@ -10,7 +10,7 @@ description = "Links to my accounts on various social services for identity, cod
 ## Code
 
 - [Github](https://github.com/avitex)
-- [WhitefoxLabs](https://git.wfx.es/avitex)
+- [WhitefoxLabs](https://git.wfxlabs.com/avitex)
 - [Crates.io](https://crates.io/users/avitex)
 - [Hex.pm](https://hex.pm/users/avitex)
 - [NPM](https://www.npmjs.com/~avitex)
