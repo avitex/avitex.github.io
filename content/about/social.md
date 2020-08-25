@@ -37,7 +37,7 @@ description = "Links to my accounts on various social services for identity, cod
 - [Steam](https://steamcommunity.com/id/avitex)
 - [Faceit](https://www.faceit.com/en/players/avitex)
 - [ESEA](https://play.esea.net/users/680258) (_dormant_)
-- [Cybergamer](https://www.cybergamer.com/profile/246296/avitex/) (_dormant_)
+- [LPL](https://letsplay.live/profile/246296/avitex/) (_dormant_)
 
 ## Other
 

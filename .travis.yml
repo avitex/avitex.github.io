@@ -6,7 +6,7 @@ before_script:
   - curl -s -L https://github.com/getzola/zola/releases/download/v0.10.1/zola-v0.10.1-x86_64-unknown-linux-gnu.tar.gz | sudo tar xvzf - -C /usr/local/bin
 
 script:
-  - zola build
+  - zola check && zola build
 
 after_success: |
   [ $TRAVIS_BRANCH = source ] &&
