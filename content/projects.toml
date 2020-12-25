@@ -1,16 +1,25 @@
 status = { experimental = "red", development = "orange", published = "green" }
 
+###############################################################################
+# Rust
+
 [project.rust-badgen]
 lang = "rust"
 crate = "badgen"
-status = "development"
+status = "published"
 github = "avitex/rust-badgen"
 
 [project.rust-dangerous]
 lang = "rust"
 crate = "dangerous"
-status = "development"
+status = "published"
 github = "avitex/rust-dangerous"
+
+[project.rust-zc]
+lang = "rust"
+crate = "zc"
+status = "published"
+github = "avitex/rust-zc"
 
 [project.rust-arae]
 lang = "rust"
@@ -21,7 +30,7 @@ github = "avitex/rust-arae"
 [project.rust-dnscat]
 lang = "rust"
 crate = "dnscat"
-status = "development"
+status = "published"
 github = "avitex/rust-dnscat"
 
 [project.rust-public-ip]
@@ -54,12 +63,6 @@ crate = "aliasable_deref_trait"
 status = "published"
 github = "avitex/rust-aliasable-deref-trait"
 
-[project.rust-shared-box]
-lang = "rust"
-crate = "shared-box"
-status = "development"
-github = "avitex/rust-shared-box"
-
 [project.rust-feast]
 lang = "rust"
 crate = "feast"
@@ -71,6 +74,9 @@ lang = "rust"
 crate = "battlelayer"
 status = "development"
 github = "avitex/battlelayer"
+
+###############################################################################
+# Elixir
 
 [project.elixir-glicko]
 lang = "elixir"
