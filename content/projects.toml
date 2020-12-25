@@ -21,6 +21,12 @@ crate = "zc"
 status = "published"
 github = "avitex/rust-zc"
 
+[project.rust-aliasable]
+lang = "rust"
+crate = "aliasable"
+status = "published"
+github = "avitex/rust-aliasable"
+
 [project.rust-arae]
 lang = "rust"
 crate = "arae"
