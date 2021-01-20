@@ -8,6 +8,7 @@ lang = "rust"
 crate = "badgen"
 status = "hibernation"
 github = "avitex/rust-badgen"
+ci = false
 published = true
 
 [project.rust-dangerous]
@@ -15,6 +16,7 @@ lang = "rust"
 crate = "dangerous"
 status = "maintained"
 github = "avitex/rust-dangerous"
+ci = true
 published = true
 
 [project.rust-zc]
@@ -22,6 +24,7 @@ lang = "rust"
 crate = "zc"
 status = "maintained"
 github = "avitex/rust-zc"
+ci = true
 published = true
 
 [project.rust-aliasable]
@@ -29,6 +32,7 @@ lang = "rust"
 crate = "aliasable"
 status = "maintained"
 github = "avitex/rust-aliasable"
+ci = true
 published = true
 
 [project.rust-arae]
@@ -36,6 +40,7 @@ lang = "rust"
 crate = "arae"
 status = "experimental"
 github = "avitex/rust-arae"
+ci = false
 published = true
 
 [project.rust-dnscat]
@@ -43,6 +48,7 @@ lang = "rust"
 crate = "dnscat"
 status = "development"
 github = "avitex/rust-dnscat"
+ci = false
 published = true
 
 [project.rust-public-ip]
@@ -50,6 +56,7 @@ lang = "rust"
 crate = "public-ip"
 status = "maintained"
 github = "avitex/rust-public-ip"
+ci = false
 published = true
 
 [project.mdbook-tera]
@@ -57,6 +64,7 @@ lang = "rust"
 crate = "mdbook-tera"
 status = "maintained"
 github = "avitex/mdbook-tera"
+ci = false
 published = true
 
 [project.rust-abuseipdb]
@@ -64,6 +72,7 @@ lang = "rust"
 crate = "abuseipdb"
 status = "maintained"
 github = "avitex/rust-abuseipdb"
+ci = false
 published = true
 
 [project.rust-aliasable-deref-trait]
@@ -71,6 +80,7 @@ lang = "rust"
 crate = "aliasable_deref_trait"
 status = "maintained"
 github = "avitex/rust-aliasable-deref-trait"
+ci = false
 published = true
 
 [project.rust-feast]
@@ -78,6 +88,7 @@ lang = "rust"
 crate = "feast"
 status = "experimental"
 github = "avitex/rust-feast"
+ci = false
 published = true
 
 [project.battlelayer]
@@ -85,6 +96,7 @@ lang = "rust"
 crate = "battlelayer"
 status = "hibernation"
 github = "avitex/battlelayer"
+ci = false
 published = false
 
 ###############################################################################
@@ -95,6 +107,7 @@ lang = "elixir"
 hex = "glicko"
 status = "maintained"
 github = "avitex/elixir-glicko"
+ci = false
 published = true
 
 [project.elixir-rcon]
@@ -102,6 +115,7 @@ lang = "elixir"
 hex = "rcon"
 status = "maintained"
 github = "avitex/elixir-rcon"
+ci = false
 published = true
 
 [project.elixir-vultr]
@@ -109,6 +123,7 @@ lang = "elixir"
 hex = "vultr"
 status = "hibernation"
 github = "avitex/elixir-vultr"
+ci = false
 published = true
 
 [project.elixir-gitlab]
@@ -116,6 +131,7 @@ lang = "elixir"
 hex = "gitlab"
 status = "hibernation"
 github = "avitex/elixir-gitlab"
+ci = false
 published = false
 
 [project.typed-struct-cast]
@@ -123,4 +139,5 @@ lang = "elixir"
 hex = "typed-struct-cast"
 status = "hibernation"
 github = "avitex/typed-struct-cast"
+ci = false
 published = false

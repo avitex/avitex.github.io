@@ -7,7 +7,9 @@
             <th>Links</th>
             <th>Package</th>
             <th>Maintenance</th>
-            <th>Status</th>
+            <th>Issues</th>
+            <th>Pull Requests</th>
+            <th>Builds</th>
         </tr>
     </thead>
     <tbody>
@@ -32,8 +34,16 @@
                 </td>
                 <td>
                     {{ macros::badge(type="github/issues", scope=project.github, desc="Github issues", link="https://github.com/" ~ project.github ~ "/issues") }}
+                </td>
+                <td>
                     {{ macros::badge(type="github/issues-pr", scope=project.github, desc="Github PRs", link="https://github.com/" ~ project.github ~ "/pulls") }}
-                    {{ macros::badge(type="github/workflow/status", scope=project.github ~ "/build", desc="Build status", link="https://github.com/" ~ project.github ~ "/actions?query=workflow:build") }}
+                </td>
+                <td>
+                    {% if project.ci %}
+                        {{ macros::badge(type="github/workflow/status", scope=project.github ~ "/build", desc="Build status", link="https://github.com/" ~ project.github ~ "/actions?query=workflow:build") }}
+                    {% else %}
+                        {{ macros::status_badge(label="build", status="unknown", color="inactive", desc="Build status", link=false) }}
+                    {% endif %}
                 </td>
             </tr>
             {% endif %}

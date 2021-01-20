@@ -28,8 +28,8 @@
 	{%- endif -%}
 {% endmacro meta_desc %}
 
-{% macro status_badge(status, desc, link, color) %}
-	{{ self::badge(type="badge", scope="status-" ~ status ~ "-" ~ color, desc=desc, link=link) }}
+{% macro status_badge(status, desc, link, color, label="status") %}
+	{{ self::badge(type="badge", scope=label ~ "-" ~ status ~ "-" ~ color, desc=desc, link=link) }}
 {% endmacro status_badge %}
 
 {% macro badge(type, scope, desc, link) %}
