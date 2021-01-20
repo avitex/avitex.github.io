@@ -11,17 +11,20 @@
         </tr>
     </thead>
     <tbody>
-            {% for project_name, project in data.project %}
+        {% for project_name, project in data.project %}
             {% if project.lang == lang %}
             <tr>
                 <td><code>{{ project_name }}</code></td>
                 <td><a href="https://github.com/{{ project.github }}">github</a></td>
                 <td>
-                    {% if project.crate %}
+                    {% if project.crate and project.published %}
                         {{ macros::badge(type="crates/v", scope=project.crate, desc="Rust crate", link="https://crates.io/crates/" ~ project.crate) }}
                     {% endif %}
-                    {% if project.hex %}
+                    {% if project.hex and project.published %}
                         {{ macros::badge(type="hexpm/v", scope=project.hex, desc="Hex package", link="https://hex.pm/packages/" ~ project.hex) }}
+                    {% endif %}
+                    {% if not project.published %}
+                        Not published
                     {% endif %}
                 </td>
                 <td>
@@ -29,7 +32,8 @@
                 </td>
                 <td>
                     {{ macros::badge(type="github/issues", scope=project.github, desc="Github issues", link="https://github.com/" ~ project.github ~ "/issues") }}
-                    {{ macros::badge(type="travis/com", scope=project.github ~ "/master", desc="Build status", link="https://travis-ci.com/" ~ project.github) }}
+                    {{ macros::badge(type="github/issues-pr", scope=project.github, desc="Github PRs", link="https://github.com/" ~ project.github ~ "/pulls") }}
+                    {{ macros::badge(type="github/workflow/status", scope=project.github ~ "/build", desc="Build status", link="https://github.com/" ~ project.github ~ "/actions?query=workflow:build") }}
                 </td>
             </tr>
             {% endif %}

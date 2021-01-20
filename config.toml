@@ -3,20 +3,20 @@ base_url = "https://1bit.pw"
 description = "Home of avitex"
 
 compile_sass = true
-highlight_code = true
-highlight_theme = "1337"
 build_search_index = true
 generate_rss = true
 
-taxonomies = [
-	{name = "blog/tags", rss = true},
-]
+taxonomies = [{ name = "blog/tags", rss = true }]
+
+[markdown]
+highlight_code = true
+highlight_theme = "1337"
 
 [link_checker]
 skip_prefixes = [
 	"https://play.esea.net",
 	"https://letsplay.live",
-	"https://twitter.com"
+	"https://twitter.com",
 ]
 
 [extra]
@@ -25,25 +25,22 @@ author = "avitex"
 [[extra.main_menu]]
 name = "Blog"
 url = "/blog"
-sub = [
-	{name = "Latest", url = "/blog"},
-	{name = "Tags", url = "/blog/tags"}
-]
+sub = [{ name = "Latest", url = "/blog" }, { name = "Tags", url = "/blog-tags" }]
 
 [[extra.main_menu]]
 name = "Projects"
 url = "/projects"
 sub = [
-	{name = "Rust", url = "#rust"},
-	{name = "Elixir", url = "#elixir"},
-	{name = "Github", url = "https://github.com/avitex"}
+	{ name = "Rust", url = "#rust" },
+	{ name = "Elixir", url = "#elixir" },
+	{ name = "Github", url = "https://github.com/avitex" },
 ]
 
 [[extra.main_menu]]
 name = "About"
 url = "/about"
 sub = [
-	{name = "Overview", url = "/about"},
-	{name = "Bio", url = "/about/bio"},
-	{name = "Social", url = "/about/social"}
+	{ name = "Overview", url = "/about" },
+	{ name = "Bio", url = "/about/bio" },
+	{ name = "Social", url = "/about/social" },
 ]

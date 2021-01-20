@@ -1,4 +1,4 @@
-status = { experimental = "red", development = "orange", published = "green" }
+status = { experimental = "red", development = "orange", hibernation = "inactive", maintained = "green" }
 
 ###############################################################################
 # Rust
@@ -6,80 +6,86 @@ status = { experimental = "red", development = "orange", published = "green" }
 [project.rust-badgen]
 lang = "rust"
 crate = "badgen"
-status = "published"
+status = "hibernation"
 github = "avitex/rust-badgen"
+published = true
 
 [project.rust-dangerous]
 lang = "rust"
 crate = "dangerous"
-status = "published"
+status = "maintained"
 github = "avitex/rust-dangerous"
+published = true
 
 [project.rust-zc]
 lang = "rust"
 crate = "zc"
-status = "published"
+status = "maintained"
 github = "avitex/rust-zc"
+published = true
 
 [project.rust-aliasable]
 lang = "rust"
 crate = "aliasable"
-status = "published"
+status = "maintained"
 github = "avitex/rust-aliasable"
+published = true
 
 [project.rust-arae]
 lang = "rust"
 crate = "arae"
 status = "experimental"
 github = "avitex/rust-arae"
+published = true
 
 [project.rust-dnscat]
 lang = "rust"
 crate = "dnscat"
-status = "published"
+status = "development"
 github = "avitex/rust-dnscat"
+published = true
 
 [project.rust-public-ip]
 lang = "rust"
 crate = "public-ip"
-status = "published"
+status = "maintained"
 github = "avitex/rust-public-ip"
+published = true
 
 [project.mdbook-tera]
 lang = "rust"
 crate = "mdbook-tera"
-status = "published"
+status = "maintained"
 github = "avitex/mdbook-tera"
-
-[project.rust-xlff]
-lang = "rust"
-crate = "xlff"
-status = "development"
-github = "avitex/rust-xlff"
+published = true
 
 [project.rust-abuseipdb]
 lang = "rust"
 crate = "abuseipdb"
-status = "published"
+status = "maintained"
 github = "avitex/rust-abuseipdb"
+published = true
 
 [project.rust-aliasable-deref-trait]
 lang = "rust"
 crate = "aliasable_deref_trait"
-status = "published"
+status = "maintained"
 github = "avitex/rust-aliasable-deref-trait"
+published = true
 
 [project.rust-feast]
 lang = "rust"
 crate = "feast"
 status = "experimental"
 github = "avitex/rust-feast"
+published = true
 
 [project.battlelayer]
 lang = "rust"
 crate = "battlelayer"
-status = "development"
+status = "hibernation"
 github = "avitex/battlelayer"
+published = false
 
 ###############################################################################
 # Elixir
@@ -87,29 +93,34 @@ github = "avitex/battlelayer"
 [project.elixir-glicko]
 lang = "elixir"
 hex = "glicko"
-status = "published"
+status = "maintained"
 github = "avitex/elixir-glicko"
+published = true
 
 [project.elixir-rcon]
 lang = "elixir"
 hex = "rcon"
-status = "published"
+status = "maintained"
 github = "avitex/elixir-rcon"
+published = true
 
 [project.elixir-vultr]
 lang = "elixir"
 hex = "vultr"
-status = "published"
+status = "hibernation"
 github = "avitex/elixir-vultr"
+published = true
 
 [project.elixir-gitlab]
 lang = "elixir"
 hex = "gitlab"
-status = "development"
+status = "hibernation"
 github = "avitex/elixir-gitlab"
+published = false
 
 [project.typed-struct-cast]
 lang = "elixir"
 hex = "typed-struct-cast"
-status = "development"
+status = "hibernation"
 github = "avitex/typed-struct-cast"
+published = false
