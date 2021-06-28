@@ -42,4 +42,3 @@ description = "Links to my accounts on various social services for identity, cod
 ## Other
 
 - Discord - `avitex#0438`
-- irc.freenode.org - `avitex`
