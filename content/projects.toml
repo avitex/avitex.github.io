@@ -8,7 +8,7 @@ lang = "rust"
 crate = "badgen"
 status = "hibernation"
 github = "avitex/rust-badgen"
-ci = false
+ci = true
 published = true
 
 [project.rust-dangerous]
@@ -56,7 +56,7 @@ lang = "rust"
 crate = "public-ip"
 status = "maintained"
 github = "avitex/rust-public-ip"
-ci = false
+ci = true
 published = true
 
 [project.mdbook-tera]
@@ -64,7 +64,7 @@ lang = "rust"
 crate = "mdbook-tera"
 status = "maintained"
 github = "avitex/mdbook-tera"
-ci = false
+ci = true
 published = true
 
 [project.rust-abuseipdb]
