@@ -2,11 +2,12 @@ title = "1bit.pw"
 base_url = "https://1bit.pw"
 description = "Home of avitex"
 
+minify_html = true
 compile_sass = true
 build_search_index = true
-generate_rss = true
+generate_feed = true
 
-taxonomies = [{ name = "blog/tags", rss = true }]
+taxonomies = [{ name = "blog/tags", feed = true }]
 
 [markdown]
 highlight_code = true

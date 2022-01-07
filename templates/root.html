@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="{{ get_url(path="site.css", cachebust=true) | safe }}" />
     <link rel="stylesheet" href="{{ get_url(path="fonts.min.css") | safe }}" />
     <link rel="icon" type="image/png" href="{{ get_url(path="favicon.png") | safe }}" />
-    <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="rss.xml") | safe }}" />
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="atom.xml") | safe }}" />
     <title>{% block title %}{{ config.title }}{% endblock title %}</title>
 </head>
 <body>

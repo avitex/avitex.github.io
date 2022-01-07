@@ -14,7 +14,7 @@
     </thead>
     <tbody>
         {% for project_name, project in data.project %}
-            {% if project.lang == lang %}
+            {% if project.lang == for_lang %}
             <tr>
                 <td><code>{{ project_name }}</code></td>
                 <td><a href="https://github.com/{{ project.github }}">github</a></td>

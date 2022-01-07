@@ -2,7 +2,7 @@
 {% import "post_macros.html" as post_macros %}
 {% block title %}Tag {{ term.name }} - {{ config.title }}{% endblock %}
 {% block content %}
-	<h1>Tag: <code>{{ term.name }}</code> <small>(<a href="{{ get_taxonomy_url(kind="blog/tags", name=term.name) }}rss.xml">RSS</a>)</small></h1>
+	<h1>Tag: <code>{{ term.name }}</code> <small>(<a href="{{ get_taxonomy_url(kind="blog/tags", name=term.name) }}atom.xml">RSS</a>)</small></h1>
 	{% for page in term.pages %}
 		{{ post_macros::page_in_list(page=page) }}
 	{% endfor %}

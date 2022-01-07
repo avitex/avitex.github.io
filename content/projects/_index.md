@@ -10,8 +10,8 @@ PRs are always welcome, see my [about page](@/about/_index.md) to contact me.
 
 ## Rust
 
-{{ projects(lang="rust") }}
+{{ projects(for_lang="rust") }}
 
 ## Elixir
 
-{{ projects(lang="elixir") }}
+{{ projects(for_lang="elixir") }}
