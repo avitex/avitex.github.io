@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://1bit.pw/</loc>
+    </url>
+    <url>
+        <loc>https://1bit.pw/about/</loc>
+    </url>
+    <url>
+        <loc>https://1bit.pw/about/bio/</loc>
+    </url>
+    <url>
+        <loc>https://1bit.pw/about/social/</loc>
+    </url>
+    <url>
+        <loc>https://1bit.pw/blog/</loc>
+    </url>
+    <url>
+        <loc>https://1bit.pw/blog/hello-world/</loc>
+        <lastmod>2018-08-22</lastmod>
+    </url>
+    <url>
+        <loc>https://1bit.pw/blog/page/1/</loc>
+    </url>
+    <url>
+        <loc>https://1bit.pw/blog/tags/</loc>
+    </url>
+    <url>
+        <loc>https://1bit.pw/blog/tags/meta/</loc>
+    </url>
+    <url>
+        <loc>https://1bit.pw/blog/tags/new/</loc>
+    </url>
+    <url>
+        <loc>https://1bit.pw/projects/</loc>
+    </url>
+</urlset>

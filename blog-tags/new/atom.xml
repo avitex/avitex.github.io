@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title>1bit.pw - new</title>
+	<subtitle>Home of avitex</subtitle>
+	<link href="https://1bit.pw/blog-tags/new/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://1bit.pw"/>
+	<generator uri="https://www.getzola.org/">Zola</generator>
+	<updated>2018-08-22T00:00:00+00:00</updated>
+	<id>https://1bit.pw/blog-tags/new/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Hello World</title>
+		<published>2018-08-22T00:00:00+00:00</published>
+		<updated>2018-08-22T00:00:00+00:00</updated>
+		<link href="https://1bit.pw/blog/hello-world/" type="text/html"/>
+		<id>https://1bit.pw/blog/hello-world/</id>
+		<content type="html">&lt;p&gt;Thought it would be a good idea to have somewhere to put my ramblings, and so I am here.&lt;br &#x2F;&gt;
+Whether or not I use this, time will tell.&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;</content>
+	</entry>
+</feed>
