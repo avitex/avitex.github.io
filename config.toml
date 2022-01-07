@@ -4,8 +4,8 @@ description = "Home of avitex"
 
 minify_html = true
 compile_sass = true
-build_search_index = true
 generate_feed = true
+build_search_index = true
 
 taxonomies = [{ name = "blog/tags", feed = true }]
 

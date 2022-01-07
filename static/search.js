@@ -39,13 +39,13 @@ function makeTeaser(body, terms) {
   });
   var termFound = false;
   var index = 0;
-  var weighted = []; // contains elements of ['word', weight, index_in_document]
+  var weighted = []; // contains elements of ["word", weight, index_in_document]
 
   // split in sentences, then words
-  var sentences = body.toLowerCase().split('. ');
+  var sentences = body.toLowerCase().split(". ");
 
   for (var i in sentences) {
-    var words = sentences[i].split(' ');
+    var words = sentences[i].split(" ");
     var value = FIRST_WORD_WEIGHT;
 
     for (var j in words) {
@@ -113,76 +113,79 @@ function makeTeaser(body, terms) {
 
     // add <em/> around search terms
     if (word[1] === TERM_WEIGHT) {
-      teaser.push('<b>');
+      teaser.push("<b>");
     }
     startIndex = word[2] + word[0].length;
     teaser.push(body.substring(word[2], startIndex));
 
     if (word[1] === TERM_WEIGHT) {
-      teaser.push('</b>');
+      teaser.push("</b>");
     }
   }
-  teaser.push('…');
-  return teaser.join('');
+  teaser.push("…");
+  return teaser.join("");
 }
 
 function formatSearchResultItem(item, terms) {
-  return '<div class="result">'
-    + `<a href="${item.ref}">${item.doc.title}</a>`
-    + `<div class="summary">${makeTeaser(item.doc.body, terms)}</div>`
-    + '</div>';
+  return '<div class="search-results__item">'
+  + `<a href="${item.ref}">${item.doc.title}</a>`
+  + `<div>${makeTeaser(item.doc.body, terms)}</div>`
+  + '</div>';
 }
 
 function initSearch() {
-  var $searchComponent = document.getElementById('search');
-  if ($searchComponent === null) {
-    return;
-  }
-  var $searchInput = $searchComponent.querySelector('input');
-  var $searchResults = $searchComponent.querySelector('.results-container');
-  var $searchResultsItems = $searchComponent.querySelector('.results');
+  var $searchInput = document.getElementById("search");
+  var $searchResults = document.querySelector(".search-results");
+  var $searchResultsItems = document.querySelector(".search-results__items");
   var MAX_ITEMS = 10;
 
   var options = {
-    bool: 'AND',
+    bool: "AND",
     fields: {
-      title: { boost: 2 },
-      body: { boost: 1 },
+      title: {boost: 2},
+      body: {boost: 1},
     }
   };
-  var currentTerm = '';
+  var currentTerm = "";
   var index = elasticlunr.Index.load(window.searchIndex);
 
-  $searchInput.addEventListener("keyup", debounce(function () {
+  $searchInput.addEventListener("keyup", debounce(function() {
     var term = $searchInput.value.trim();
     if (term === currentTerm || !index) {
       return;
     }
-    $searchResults.style.display = term === '' ? 'none' : 'block';
-    $searchResultsItems.innerHTML = '';
-    if (term === '') {
+    $searchResults.style.display = term === "" ? "none" : "block";
+    $searchResultsItems.innerHTML = "";
+    if (term === "") {
       return;
     }
 
     var results = index.search(term, options);
     if (results.length === 0) {
-      $searchResults.style.display = 'none';
+      $searchResults.style.display = "none";
       return;
     }
 
     currentTerm = term;
     for (var i = 0; i < Math.min(results.length, MAX_ITEMS); i++) {
-      var item = document.createElement('li');
-      item.innerHTML = formatSearchResultItem(results[i], term.split(' '));
+      var item = document.createElement("li");
+      item.innerHTML = formatSearchResultItem(results[i], term.split(" "));
       $searchResultsItems.appendChild(item);
     }
   }, 150));
+
+  window.addEventListener('click', function(e) {
+    if ($searchResults.style.display == "block" && !$searchResults.contains(e.target)) {
+      $searchResults.style.display = "none";
+    }
+  });
 }
 
-if (document.readyState === 'complete' ||
-  (document.readyState !== 'loading' && !document.documentElement.doScroll)
+
+if (document.readyState === "complete" ||
+    (document.readyState !== "loading" && !document.documentElement.doScroll)
 ) {
   initSearch();
 } else {
-  document.addEventListener('DOMContentLoaded', initSearch);
+  document.addEventListener("DOMContentLoaded", initSearch);
 }
